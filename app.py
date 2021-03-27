@@ -69,10 +69,10 @@ def echo_all(message):
     elif(b[0] =="/sendWA"):
         test = db.child("users").child(chatt).get()
         p = test.val()['sid']
-        q = test.val()['token']
+        d = test.val()['token']
         t = test.val()['fromphone']
         r = test.val()['tophone']
-        client = Client(p,q)
+        client = Client(p,d)
         client.messages.create(body=b[1],from_="whatsapp:"+ str(t),to="whatsapp:"+str(r))
     else:
         pass
