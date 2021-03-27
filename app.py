@@ -31,36 +31,36 @@ def echo_all(message):
         db.child("users").child(chatt).set(data)
         bot.reply_to(message, "SID added")
     elif(b[0] == "/settoken"):
-        data = {
+        data1 = {
               "token": b[1]
              }
   
-        db.child("users").child(chatt).set(data)
+        db.child("users").child(chatt).set(data1)
         bot.reply_to(message, "token added")
     elif(b[0] == "/setfromphone"):
-        data = {
+        data2 = {
               "fromphone": b[1]
              }
         
-        db.child("users").child(chatt).set(data)
+        db.child("users").child(chatt).set(data2)
         bot.reply_to(message, "fromphone added")
     elif(b[0] == "/settophone"):
-        data = {
+        data3 = {
               "tophone": b[1]
              }
-        db.child("users").child(chatt).set(data)
+        db.child("users").child(chatt).set(data3)
         bot.reply_to(message, "tophone added")
     elif(b[0] == "/updatetophone"):
-        data = {
+        data4 = {
               "tophone": b[1]
              }
-        db.child("users").child(chatt).update(data)
+        db.child("users").child(chatt).update(data4)
         bot.reply_to(message, "tophone updated")
     elif(b[0] == "/updatefromphone"):
-        data = {
+        data5 = {
               "fromphone": b[1]
              }
-        db.child("users").child(chatt).update(data)
+        db.child("users").child(chatt).update(data5)
         bot.reply_to(message, "fromphone updated")
     
     elif(b[0] =="/sendWA"):
