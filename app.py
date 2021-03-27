@@ -28,15 +28,19 @@ def echo_all(message):
         bot.reply_to(message, "Welcome to tele2WA bot")
     elif(b[0] == "/setsid"):
         x = b[1]
+        print(x)
         bot.reply_to(message, "SID added")
     elif(b[0] == "/settoken"):
         y = b[1]
+        print(y)
         bot.reply_to(message, "token added")
     elif(b[0] == "/setfromphone"):
         z = b[1]
+        print(z)
         bot.reply_to(message, "fromphone added")
     elif(b[0] == "/settophone"):
         q = b[1]
+        print(q)
         data = {
           "sid":x,
           "token":y,
