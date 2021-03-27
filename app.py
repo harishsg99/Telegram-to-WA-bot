@@ -11,7 +11,10 @@ config = {
   "databaseURL": "https://wbtotelebot-default-rtdb.firebaseio.com",
   "storageBucket": "wbtotelebot.appspot.com"
 }
-
+x = 0
+y = 0
+z = 0
+q = 0
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
 
