@@ -20,7 +20,7 @@ def echo_all(message):
     a = message.text
     b = a.split('@')
     print(b)
-    chatt = message[-1].chat.id
+    chatt = message.chat.id
     if(b[0] == "/start"):
         bot.reply_to(message, "Welcome to tele2WA bot")
     elif(b[0] == "/setsid"):
