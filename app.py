@@ -24,32 +24,24 @@ def echo_all(message):
     if(b[0] == "/start"):
         bot.reply_to(message, "Welcome to tele2WA bot")
     elif(b[0] == "/setsid"):
-        data = {
-              "sid": b[1]
-             }
-  
-        db.child("users").child(chatt).set(data)
+        x = b[1]
         bot.reply_to(message, "SID added")
     elif(b[0] == "/settoken"):
-        data1 = {
-              "token": b[1]
-             }
-  
-        db.child("users").child(chatt).set(data1)
+        y = b[1]
         bot.reply_to(message, "token added")
     elif(b[0] == "/setfromphone"):
-        data2 = {
-              "fromphone": b[1]
-             }
-        
-        db.child("users").child(chatt).set(data2)
+        z = b[1]
         bot.reply_to(message, "fromphone added")
     elif(b[0] == "/settophone"):
-        data3 = {
-              "tophone": b[1]
-             }
-        db.child("users").child(chatt).set(data3)
-        bot.reply_to(message, "tophone added")
+        q = b[1]
+        data = {
+          "sid":x
+          "token":y
+          "fromphone":z
+          "tophone":q
+         }
+  
+        bot.reply_to(message, "details added")
     elif(b[0] == "/updatetophone"):
         data4 = {
               "tophone": b[1]
