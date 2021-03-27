@@ -21,44 +21,44 @@ def echo_all(message):
     b = a.split('@')
     print(b)
     chatt = message[-1].chat.id
-    if(b[0] == "/start")
+    if(b[0] == "/start"):
         bot.reply_to(message, "Welcome to tele2WA bot")
-    elif(b[0] == "/setsid")
+    elif(b[0] == "/setsid"):
         data = {
               "sid": b[1]
              }
   
         db.child("users").child(chatt).set(data)
         bot.reply_to(message, "SID updated")
-    elif(b[0] == "/settoken")
+    elif(b[0] == "/settoken"):
         data = {
               "token": b[1]
              }
   
         db.child("users").child(chatt).set(data)
-    elif(b[0] == "/setfromphone")
+    elif(b[0] == "/setfromphone"):
         data = {
               "fromphone": b[1]
              }
   
         db.child("users").child(chatt).set(data)
-    elif(b[0] == "/settophone")
+    elif(b[0] == "/settophone"):
         data = {
               "tophone": b[1]
              }
         db.child("users").child(chatt).set(data)
-    elif(b[0] == "/updatetophone")
+    elif(b[0] == "/updatetophone"):
         data = {
               "tophone": b[1]
              }
         db.child("users").child(chatt).update(data)
-    elif(b[0] == "/updatefromphone")
+    elif(b[0] == "/updatefromphone"):
         data = {
               "fromphone": b[1]
              }
         db.child("users").child(chatt).update(data)
     
-    elif(b[0] =="/sendWA")
+    elif(b[0] =="/sendWA"):
         test = db.child("users").child(chatt).get()
         p = test.val()['sid']
         q = test.val()['token']
@@ -66,6 +66,8 @@ def echo_all(message):
         r = user.val()['tophone']
         client = Client(p,q)
         client.messages.create(body=b[1],from="whatsapp:"+ str(t),to="whatsapp:"+str(r))
+    else:
+        pass
        
 if __name__ == '__main__':
     main()
