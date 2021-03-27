@@ -23,6 +23,10 @@ def echo_all(message):
     a = message.text
     b = a.split('@')
     print(b)
+    global x
+    global y
+    global z
+    global q
     chatt = message.chat.id
     if(b[0] == "/start"):
         bot.reply_to(message, "Welcome to tele2WA bot")
