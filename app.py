@@ -35,9 +35,9 @@ def echo_all(message):
     elif(b[0] == "/settophone"):
         q = b[1]
         data = {
-          "sid":x
-          "token":y
-          "fromphone":z
+          "sid":x,
+          "token":y,
+          "fromphone":z,
           "tophone":q
          }
   
