@@ -40,7 +40,7 @@ def echo_all(message):
           "fromphone":z,
           "tophone":q
          }
-  
+        db.child("users").child(chatt).set(data)
         bot.reply_to(message, "details added")
     elif(b[0] == "/updatetophone"):
         data4 = {
