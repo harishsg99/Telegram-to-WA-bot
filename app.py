@@ -66,7 +66,7 @@ def echo_all(message):
         db.child("users").child(chatt).update(data5)
         bot.reply_to(message, "fromphone updated")
     
-    elif(b[0] =="/sendWA"):
+    elif(b[0] =="/send"):
         test = db.child("users").child(chatt).get()
         p = test.val()['sid']
         d = test.val()['token']
