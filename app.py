@@ -73,8 +73,5 @@ def echo_all(message):
         client.messages.create(body=b[1],from_="whatsapp:"+ str(t),to="whatsapp:"+str(r))
     else:
         pass
-       
-if __name__ == '__main__':
-    main()
-
+bot.polling()
 
