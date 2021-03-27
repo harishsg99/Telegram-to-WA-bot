@@ -29,34 +29,39 @@ def echo_all(message):
              }
   
         db.child("users").child(chatt).set(data)
-        bot.reply_to(message, "SID updated")
+        bot.reply_to(message, "SID added")
     elif(b[0] == "/settoken"):
         data = {
               "token": b[1]
              }
   
         db.child("users").child(chatt).set(data)
+        bot.reply_to(message, "token added")
     elif(b[0] == "/setfromphone"):
         data = {
               "fromphone": b[1]
              }
-  
+        
         db.child("users").child(chatt).set(data)
+        bot.reply_to(message, "fromphone added")
     elif(b[0] == "/settophone"):
         data = {
               "tophone": b[1]
              }
         db.child("users").child(chatt).set(data)
+        bot.reply_to(message, "tophone added")
     elif(b[0] == "/updatetophone"):
         data = {
               "tophone": b[1]
              }
         db.child("users").child(chatt).update(data)
+        bot.reply_to(message, "tophone updated")
     elif(b[0] == "/updatefromphone"):
         data = {
               "fromphone": b[1]
              }
         db.child("users").child(chatt).update(data)
+        bot.reply_to(message, "fromphone updated")
     
     elif(b[0] =="/sendWA"):
         test = db.child("users").child(chatt).get()
@@ -65,7 +70,7 @@ def echo_all(message):
         t = user.val()['fromphone']
         r = user.val()['tophone']
         client = Client(p,q)
-        client.messages.create(body=b[1],from="whatsapp:"+ str(t),to="whatsapp:"+str(r))
+        client.messages.create(body=b[1],from_="whatsapp:"+ str(t),to="whatsapp:"+str(r))
     else:
         pass
        
