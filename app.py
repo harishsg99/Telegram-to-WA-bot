@@ -70,8 +70,8 @@ def echo_all(message):
         test = db.child("users").child(chatt).get()
         p = test.val()['sid']
         q = test.val()['token']
-        t = user.val()['fromphone']
-        r = user.val()['tophone']
+        t = test.val()['fromphone']
+        r = test.val()['tophone']
         client = Client(p,q)
         client.messages.create(body=b[1],from_="whatsapp:"+ str(t),to="whatsapp:"+str(r))
     else:
