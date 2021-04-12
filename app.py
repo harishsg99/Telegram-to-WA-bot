@@ -4,12 +4,12 @@ import re
 import os
 from twilio.rest import Client
 import pyrebase
-bot = telebot.TeleBot("1733329720:AAHlKaQ5ONTA85WFhvOvpdn9Wi11qfBZ2Ms", parse_mode=None)
+bot = telebot.TeleBot("Replace this with telegram bot father key", parse_mode=None)
 config = {
-  "apiKey": "AIzaSyDPmfNoXoIO9S7TRH1eYtgqNY-Ny3kak9E",
-  "authDomain": "wbtotelebot.firebaseapp.com",
-  "databaseURL": "https://wbtotelebot-default-rtdb.firebaseio.com",
-  "storageBucket": "wbtotelebot.appspot.com"
+  "apiKey": "",
+  "authDomain": "",
+  "databaseURL": "",
+  "storageBucket": ""
 }
 x = 0
 y = 0
